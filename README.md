@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +65,31 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# desarrollo de aplicaciones distribuidas
+## Sesion 1
+
+### crear proyecto con larabel
+```bash
+   composer create-project laravel/laravel:^11.0 sistemauss
+```
+ejecutar servidor
+
+```bash
+    php artisan serve
+```
+
+
+
+
+### comandos git (terminal)
+```bash
+git init
+git remote add origin https://github.com/Elterrorneg/sistema_larabel.git
+git add -A
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git commint -m "primera sesion"
+git push origin master
+```
+>>>>>>> origin/master
