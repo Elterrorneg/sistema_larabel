@@ -4,30 +4,30 @@ tipo de comprobante
     -id
     -codigo
     -description
-# 1 Crear la migaracion
+# 1 Crear la migracion
 ``` bash
     php artisan make:migration create_tipo_comprobante_table
 ```
     database-> migration
-# 1 Ejecutar la migracion
+# 2 Ejecutar la migracion
 ``` bash
-    php artisan migrate:fresh --seed
+    php artisan migrate:refresh --seed
 ```
-# 1 Creamos el modelo
+# 3 Creamos el modelo
 ``` bash
     php artisan make:model tipoComprobante
 ```
     app->Models
-# 1 Creamos el Controlador
+# 4 Creamos el Controlador
 ``` bash
     php artisan make:controller TipoComprobanteController --resource --model=TipoComprobante
 ```
-    App\Http\Controlleres
-# 1 Creamos el Request
+    App\Http\Controllers
+# 5 Creamos el Request
 ``` bash
     php artisan make:request TipoComprobanteRequest
 ```
-# 1 Agregamos la ruta, al routes/web.php
+# 6 Agregamos la ruta, al routes/web.php
 ``` bash
     Route::resource('tipo-comprobante', TipoComprobanteController::class);
 ```

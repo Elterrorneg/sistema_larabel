@@ -11,7 +11,7 @@
     ##instalar
     php artisan breeze:install
 
-    php artisan migrate --sed
+    php artisan migrate --seed
     php artisan migrate
     npm install
     npm run dev

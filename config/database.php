@@ -16,11 +16,7 @@ return [
     |
     */
 
-<<<<<<< HEAD
-    'default' => env('DB_CONNECTION', 'sqlite'),
-=======
     'default' => env('DB_CONNECTION', 'mariadb'),
->>>>>>> origin/master
 
     /*
     |--------------------------------------------------------------------------
@@ -53,11 +49,7 @@ return [
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
-<<<<<<< HEAD
-            'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),
-=======
             'collation' => env('DB_COLLATION', 'utf8mb4_0900_ai_ci'),
->>>>>>> origin/master
             'prefix' => '',
             'prefix_indexes' => true,
             'strict' => true,
