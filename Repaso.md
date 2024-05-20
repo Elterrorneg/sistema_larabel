@@ -1,0 +1,35 @@
+#### Brezeer
+vamos a dar matenimiento a la tabla 
+tipo de comprobante
+    -id
+    -codigo
+    -description
+# 1 Crear la migaracion
+``` bash
+    php artisan make:migration create_tipo_comprobante_table
+```
+    database-> migration
+# 1 Ejecutar la migracion
+``` bash
+    php artisan migrate:fresh --seed
+```
+# 1 Creamos el modelo
+``` bash
+    php artisan make:model tipoComprobante
+```
+    app->Models
+# 1 Creamos el Controlador
+``` bash
+    php artisan make:controller TipoComprobanteController --resource --model=TipoComprobante
+```
+    App\Http\Controlleres
+# 1 Creamos el Request
+``` bash
+    php artisan make:request TipoComprobanteRequest
+```
+# 1 Agregamos la ruta, al routes/web.php
+``` bash
+    Route::resource('tipo-comprobante', TipoComprobanteController::class);
+```
+# 7 Agregamos las vitas
+Creamos una carpeta tipo-comprobante en la carpeta resources/views y dentro agregamos dos archivos: index.blade.php action.blade.php
