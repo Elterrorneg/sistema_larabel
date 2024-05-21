@@ -22,9 +22,9 @@ class UserController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(Request $request)
+    public function create()
     {
-        $categoria = new User();
+        $user = new User();
         return view('user.action', ['user'=> new User()]);
     }
 
@@ -35,7 +35,7 @@ class UserController extends Controller
     {
         $user = new User;
         $user->name=$request->input('name');
-        $user->gmail=$request->input('email');
+        $user->email=$request->input('email');
         $user->password=bcrypt($request->input('password'));
         $user->save();
         return response()->json([
@@ -68,6 +68,8 @@ class UserController extends Controller
     {
         $user = User::findOrFail($id);
         $user->name=$request->name;
+        $user->email=$request->email;
+        $user->password=bcrypt($request->password);
         $user->save();
 
         return response()->json([

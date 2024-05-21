@@ -1,5 +1,5 @@
 <div class="modal-content">
-    <form id="formUpdate" action="{{$user->id ? route('user.update', $categoria) : route('user.store')}}" method = "post">
+    <form id="formUpdate" action="{{$user->id ? route('user.update', $user) : route('user.store')}}" method = "post">
         <div class="modal-header">
             <h4 class="modal-title" id="modal-title">Nuevo</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -13,9 +13,15 @@
             @endif
             @csrf
             <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" name = "nombre" class="form-control" id="nombre" placeholder="Ingrese nombre" value="{{$user->nombre}}">
-                <div id="msg_nombre"></div>
+                <label for="name">Nombre</label>
+                <input type="text" name = "name" class="form-control" id="name" placeholder="Ingrese nombre" value="{{$user->name}}">
+                <div id="msg_name"></div>
+                <label for="email">Correo</label>
+                <input type="text" name = "email" class="form-control" id="email" placeholder="Ingrese correo" value="{{$user->email}}">
+                <div id="msg_email"></div>
+                <label for="password">Contraseña</label>
+                <input type="password" name = "password" class="form-control" id="password" placeholder="Ingrese contraseña" value="{{$user->password}}">
+                <div id="msg_password"></div>
             </div>
         <div class="form-group">
             <button type="submit" class="btn btn-primary" id="guardar"><span id="textoBoton"></span></button>

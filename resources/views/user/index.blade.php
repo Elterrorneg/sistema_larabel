@@ -128,7 +128,7 @@
               $(_form).find('.invalid-feedback').remove();
               if(errors){
                 for(const [key, value] of Object.entries(errors)){
-                    $(_form).find(`[name='${key}']`).addClass('is-invalid')
+                    $(_form).find(`[name='${key}']`).addClass('is-invalid');
                     $(_form).find(`#msg_${key}`).parent().append(`<span class="invalid-feedback">${value}</span>`);
                 }
               }

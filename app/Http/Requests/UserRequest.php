@@ -24,7 +24,7 @@ class UserRequest extends FormRequest
         switch ($this->method()) {
             case 'POST':
                 return [
-                    'name' => 'required|unique:categorias|max:70',
+                    'name' => 'required|unique:users|max:70',
                     'email' => 'required|max:70',
                     'password' => 'required|max:70',
                 ];
@@ -32,7 +32,7 @@ class UserRequest extends FormRequest
             case 'PATCH':
             {
                 return [
-                    'name' => 'required|unique:categorias,nombre,'.$this->get('id').'|max:70',
+                    'name' => 'required|unique:users,name,'.$this->get('id').'|max:70',
                     'email' => 'max:70',
                     'password' => 'max:70',
                 ];
